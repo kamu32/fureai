@@ -1,0 +1,104 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 83 60% 94%;
+    --foreground: 150 20% 32%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 120 27% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 150 20% 32%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 83 60% 94%;
+    --muted-foreground: 150 20% 40%;
+
+    --accent: 120 16% 80%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 120 27% 60% / 0.3;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 120 27% 60%;
+
+    --radius: 1.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-pugeat-bg text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif font-bold text-pugeat-dark-green;
+  }
+}
+
+/* カスタムコンポーネントスタイル */
+@layer components {
+  .service-card {
+    @apply bg-white rounded-3xl p-6 shadow-sm relative overflow-hidden transition-all duration-300 hover:shadow-md;
+  }
+
+  .service-card img {
+    @apply rounded-2xl;
+  }
+
+  .nav-link {
+    @apply text-pugeat-dark-green relative px-4 py-2 font-medium 
+    after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 
+    after:bg-pugeat-green after:scale-x-0 after:origin-bottom-right after:transition-transform after:duration-300 
+    hover:after:scale-x-100 hover:after:origin-bottom-left;
+  }
+
+  .nav-link.active {
+    @apply after:scale-x-100;
+  }
+
+  .btn-primary {
+    @apply bg-pugeat-dark-green text-white px-6 py-3 rounded-full 
+    transition-all duration-300 hover:bg-opacity-90 hover:shadow-md 
+    hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-pugeat-green;
+  }
+
+  .btn-outline {
+    @apply border border-pugeat-dark-green text-pugeat-dark-green px-6 py-3 rounded-full 
+    transition-all duration-300 hover:bg-pugeat-dark-green hover:text-white 
+    hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-pugeat-green;
+  }
+}
+
+/* カスタムアニメーション */
+.reveal-animation {
+  @apply opacity-0;
+  animation: fade-in 0.7s ease-out forwards;
+}
+
+.delay-100 {
+  animation-delay: 0.1s;
+}
+
+.delay-200 {
+  animation-delay: 0.2s;
+}
+
+.delay-300 {
+  animation-delay: 0.3s;
+}
