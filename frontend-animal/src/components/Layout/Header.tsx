@@ -21,53 +21,106 @@ const Header = () => {
   }, []);
 
   return (
-    <header 
-      className={`fixed w-full z-50 transition-all duration-300 ${
+    <header id="header"
+      className={`header ${
         scrolled ? 'bg-white/90 backdrop-blur-sm shadow-sm py-3' : 'bg-transparent py-5'
       }`}
     >
-      <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
-        <Link 
-          to="/" 
-          className="flex items-center space-x-2"
-          aria-label="Pugeat ホームページ"
-        >
-          <img 
-            src="/lovable-uploads/5e3a71a2-4dea-48ab-a8a7-c0c3f83cf3c2.png" 
-            alt="Pugeat Logo" 
-            className="h-10 w-auto"
-          />
-        </Link>
-
-        {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-1">
-          <Link to="/about" className="nav-link">ABOUT US</Link>
-          <Link to="/service" className="nav-link">SERVICE</Link>
-          <Link to="/news" className="nav-link">NEWS・BLOG</Link>
-          <Link to="/contact" className="ml-4 btn-primary">CONTACT</Link>
-        </nav>
-
-        {/* Mobile Menu Button */}
-        <button 
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="md:hidden text-pugeat-dark-green p-2 rounded-md"
-          aria-label="メニューを開く"
-        >
-          <Menu size={24} />
-        </button>
-      </div>
-
-      {/* Mobile Navigation */}
-      <div className={`md:hidden transition-all duration-300 ease-in-out absolute w-full bg-white shadow-md ${
-        mobileMenuOpen ? 'max-h-60 opacity-100' : 'max-h-0 opacity-0 pointer-events-none'
-      } overflow-hidden`}>
-        <div className="container mx-auto px-4 py-4 flex flex-col space-y-3">
-          <Link to="/about" className="nav-link block py-2" onClick={() => setMobileMenuOpen(false)}>ABOUT US</Link>
-          <Link to="/service" className="nav-link block py-2" onClick={() => setMobileMenuOpen(false)}>SERVICE</Link>
-          <Link to="/news" className="nav-link block py-2" onClick={() => setMobileMenuOpen(false)}>NEWS・BLOG</Link>
-          <Link to="/contact" className="btn-primary block text-center" onClick={() => setMobileMenuOpen(false)}>CONTACT</Link>
-        </div>
-      </div>
+            <div className="header-content">
+                <div className="header-logo">
+                    <a href="/">
+                        <img src="/img/Forte-logo.png" alt="Forte Logo" />
+                    </a>
+                </div>
+                <div className="header-menu">
+                    <nav id="pc-nav">
+                        <ul className="all-nav">
+                            <li className="nav-about">
+                                <a href="/about" className="nav-text">
+                                    <span className="header-span">私たちについて</span><br />about us
+                                </a>
+                            </li>
+                            <li className="nav-service menu-item">
+                                <div className="nav-text">
+                                    <span className="header-span">サービス</span><br />service
+                                </div>
+                                <ul className="submenu">
+                                    <li>
+                                        <a href="/stores" className="sub-text">店舗紹介</a>
+                                    </li>
+                                    <li>
+                                        <a href="/satooya" className="sub-text">里親募集</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li className="nav-news">
+                                <a href="/news-list" className="nav-text">
+                                    <span className="header-span">ニュース・ブログ</span><br />news・blog
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div className="mail-button">
+                    <a href="/contact">
+                        <span className="contact-text">お問い合わせ</span><br />CONTACT
+                    </a>
+                </div>
+                <div className="hamburger-menu">
+                    <div className="hamburger-icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <nav className="menu">
+                        <div className="header-logo">
+                            <a href="/">
+                                <img src="/img/Forte-logo.png" alt="Forte Logo" />
+                            </a>
+                        </div>
+                        <ul className="menu-flex">
+                            <li className="menu-li">
+                                <a href="/about" className="menu-title">ABOUT US<br /><span>私たちについて</span></a>
+                                <ul className="menu-sub">
+                                    <li>
+                                        <a href="/about" className="sub-text">ー制作中ー</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li className="menu-li">
+                                <a href="#" className="menu-title">SERVICE<br /><span>サービス</span></a>
+                                <ul className="menu-sub">
+                                    <li>
+                                        <a href="/stores" className="sub-text">店舗紹介</a>
+                                    </li>
+                                    <li>
+                                        <a href="/satooya" className="sub-text">里親募集</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li className="menu-li">
+                                <a href="/contact" className="menu-title">CONTACT<br /><span>お問い合わせ</span></a>
+                                <ul className="menu-sub">
+                                    <li>
+                                        <a href="/contact" className="sub-text">お問い合わせ<br />フォーム</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li className="menu-li">
+                                <a href="/news-list" className="menu-title">NEWS・BLOG<br /><span>ニュース・ブログ</span></a>
+                                <ul className="menu-sub">
+                                    <li>
+                                        <a href="/news-list" className="sub-text">ニュース・ブログ</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <a href="https://www.instagram.com/fureai222/" className="instagram-logo">
+                            <img src="./img/FORTE-instagram.png" alt="Instagram Logo" />
+                        </a>
+                    </nav>
+                </div>
+            </div>
     </header>
   );
 };
