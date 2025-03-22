@@ -1,0 +1,191 @@
+#header {
+    background-color: #e3f9c6;
+}
+/* shoplist - Top */
+.shoplist {
+    width: 100%;
+    position: relative;
+}
+.shoplist-in {
+    background-color: #f4f4f4;
+
+}
+.store-in {
+    opacity: 0.7;
+    width: 100%;
+    aspect-ratio: 1792/1024;
+    background: #f4f4f4;
+}
+.shoplist-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+.shoplist-left .shoplist-img img {
+    width: calc(100vw * 570 / 1792);
+    aspect-ratio: 619/1712;
+      /* マスク効果 */
+  -webkit-mask-image: linear-gradient(to bottom, rgb(255, 252, 252) 60%, transparent 100%); /* Safari対応 */
+  mask-image: linear-gradient(to bottom, rgb(255, 255, 255) 60%, transparent 100%); /* 他ブラウザ対応 */
+}
+.shoplist-title {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    z-index: 3;
+    top: 20%;
+}
+.shoplist-title h1 {
+    color: #f1fae5;
+}
+.shoplist-title h1::before {
+    display: block;
+    content:"店舗紹介";
+    font-size: 30px;
+}
+.shoplist-messages {
+    margin: 100px 0;
+    width: 100%;
+}
+.shoplist-messages .shoplist-message {
+    width: 60%;
+    margin-left: auto;
+}
+.shoplist-messages .shoplist-message p {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 35px 0;
+    line-height: 2;
+}
+
+
+
+.cafe-top {
+    margin-top: 65px;
+    display: flex;
+    justify-content: center;
+}
+.cafe-img {
+    max-width: 800px;
+
+}
+.cafe-img img {
+    width: 100%;;
+}
+.cafe-top-header {
+    padding: 50px;
+    background-color: #f1fae5;
+}
+.cafe-top-header h1 {
+    font-weight: bold;
+}
+.cafe-top-header img {
+    max-width: 325px;
+    margin-top: 20px;
+}
+.cafe-top-header .top-message {
+    font-size: 20px;
+    margin-top: 10px;
+}
+cafe-header {
+    text-align: center;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+#searchInput {
+    width: 300px;
+    padding: 10px;
+    border: #516863 2px solid;
+    border-radius: 10px;
+    margin-top: 100px;
+    font-size: 16px;
+}
+/* container */
+.cafe-service {
+    margin: 200px 0;
+    font-family: none;
+}
+.tabs {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.tab-button {
+    width: 150px;
+    height: 45px;
+    background-color: #f4f4f4;
+    border: solid 1px #516863;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 20px;
+    color: #516863;
+}
+
+.tab-button:hover {
+    background-color: #ccc;
+}
+
+.tab-button.active {
+    background-color: #516863;
+    color: #f4f4f4;
+}
+
+.all-content {
+    margin: 0 auto;
+    width: 50%;
+    height: 50px;
+}
+/* カフェの情報 */
+.store-list {
+    margin-top: 100px;
+    width: 100%;
+}
+.tab-content {
+    display: none;
+}
+
+.tab-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.cafe-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    padding: 20px;
+}
+.cafe-list a:hover{
+    opacity: 0.6;
+}
+.cafe-item h2 {
+    font-size: 30px;
+}
+.cafe-information {
+    margin-top: 20px;
+    padding: 0 20px;
+}
+
+.cafe-information .cafe-detail {
+    padding: 20px 0;
+}
+.cafe-information .cafe-detail .cafe-koumoku-content {
+    font-size: 18px;
+}
+.photo {
+    max-width: 550px;
+        img {
+            width: 100%;
+            aspect-ratio: 1160/800;
+            border-radius: 10px;
+        }
+}
+.content-footer {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.content-footer .footer-img {
+    width: 100%;
+}

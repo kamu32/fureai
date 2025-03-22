@@ -1,0 +1,22 @@
+:root {
+    /* 色 */
+    --white: #f1f1f1;
+    --drakgreen:#516863;
+    --back-base:#FFFCED;
+    --moji-white: #f1f1f1;
+    --button-green:#4DA674;
+    --main-bg: #516863;
+
+    --background-main: #e3f9c6;
+    --background-accent: #FEE3D3;
+    --text-main: #516863;
+    --text-secondary: #B7B7A4;
+    /* ボタンの色 */
+    --button-detail: #5bc8ac;
+    --button-primary: #C58C60;
+    --button-secondary: #C1E6BA;
+    --button-hover: #516863;
+    --footer-bg: #516863 ;
+    --footer-text: #FFFCED;
+}
+/* カラーバリアブル */

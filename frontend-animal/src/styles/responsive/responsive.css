@@ -1,0 +1,466 @@
+/* タブレット 最大950px  */
+@media screen and (max-width: 980px ){
+    .photo {
+        max-width: 400px;
+    }
+    /* header */
+    #header {
+        .header-span {
+            font-size: 8px;
+        }
+        .header-content .header-menu nav ul li .nav-text {
+            font-size: 0.8em;
+        }
+        .mail-button a {
+            width: 100px;
+            height: 35px;
+            font-size: 0.8em;
+        }
+    }
+
+    /* news-blog */
+    .news-blog-content {
+        .article-container {
+            width: 100%;
+            padding: 0 10px;
+            .article-title {
+                font-size: 2em;
+            }
+        }
+    }
+    @media screen and (max-width: 900px) {
+        #header .header-content .header-menu, #header .mail-button {
+            display: none;
+        }
+        #header { 
+            padding: 0 15px;
+            .hamburger-menu {
+                display: block;
+            }
+        }
+
+        #contact {
+            .contact-title {
+                h2 {
+                    font-size: 1.4em;
+                }
+            }
+            .contact-text {
+                padding: 25px 5px;
+                p {
+                    font-size: 0.8em;
+                }
+            }
+        }
+        .satooya-list-bar {
+            .satooya-list-article {
+                .carousel-container {
+                    .carousel {
+                        .card {
+                            flex: 0 0 calc(33.33% - 16px);
+                        }
+                    }
+                }
+                .prev-btn, .next-btn {
+                    padding: 10px 0;
+                }
+            }
+        }
+        @media  screen and (max-width: 650px) {
+            /* BASE PART */
+            .silde-scroll-content {
+                display: block;
+            }
+            .reccomend-content {
+                padding: 30px 0;
+                h2 {
+                    font-size: 1.2em;
+                }
+                .main-content {
+                    display: block;
+                    text-align: center;
+                    .first-content, .second-content {
+                        max-width: 350px;
+                        margin: 15px auto;
+
+                    }
+                }
+            }
+            .searchformCategory {
+                .scroll-container {
+                    border: none;
+                    ul {
+                        gap: 5px;
+                    }
+                }
+
+            }
+            #header {
+                padding: 10px 20px;
+                a {
+                    font-size: 1.8em;
+                }
+                .header-logo img {
+                    max-width: 140px;
+                }
+            }
+            #footer {
+                display: block;
+                padding: 20px 0;
+                margin: 0 auto;
+                .footer-logo,li {
+                    text-align: center;
+                }
+                .footer-logo {
+                    margin-bottom: 20px;
+                    img {
+                        max-width: 130px;
+                    }
+                }
+                nav {
+                    margin: 0;
+                }
+                ul {
+                    display: inline-block;
+                    width: 100%;
+                    a::after {
+                        content: "－";
+                        padding: 0 2px;
+                    }
+                }
+                
+            }
+
+            /* TOP PAGE */
+            .top-content {
+                .top-img-select {
+                    width: 100vw;
+                    height: 100vh;
+                    overflow: hidden;
+                    background-color: var(--text-main);
+                }
+                .center {
+                    object-position: 30% center;
+                    opacity: 0.8;
+                }
+                .top-title {
+                    h1 {
+                        font-size: 2.2em;
+                    }
+                    h2 {
+                        font-size: 1.1em;
+                    }
+                }
+            }
+            #service {
+                padding: 0 10px;
+                .service-content {
+                    display: block;
+                    .service-detail {
+                        text-align: center;
+                        padding: 20px 0;
+                        margin: 0;
+                        width: 100%;
+                        .service-h {
+                            font-size: 1.6em;
+                            margin: 0;
+                        }
+                        .service-name {
+                            margin-top: 5px;
+                            .service-text {
+                                margin: 15px auto;
+                                min-height: auto;
+                                .service-p {
+                                    font-size: 0.8em;
+                                    margin: 0;
+                                }
+                            }
+
+                        }
+
+                    }
+                    .serivce-img img {
+                        width: 100%;
+                        object-fit: cover;
+                        aspect-ratio: 3/2;
+                    }
+                }
+            }
+            #news {
+                display: block;
+                padding: 30px 10px;
+                .news-title {
+                    width: 100%;
+                    flex-direction: row;
+                    align-items: center;
+                    .news-button {
+                        margin: 0;
+                    }
+                }
+                .news-list {
+                    ul {
+                        display: flex;
+                        flex-direction: column;
+                        .news-list-content {
+                            border-bottom: 1px solid var(--text-main);
+                            margin: 0 auto;
+                            .news-one {
+                                .news-img {
+                                    display: none;
+                                }
+                                .news-detail {
+                                    .news-detail-title {
+                                        text-align: left;
+                                        font-weight: normal;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .last-img {
+                display: none;
+            }
+
+
+            /* SATOOYA PAGE */
+            .satooya-top-content {
+                .top-img {
+                    width: 100vw;
+                    height: 500px;
+                    overflow: hidden;
+                    background-color: var(--text-main);
+                    object-fit: cover;
+                    object-position: 50% center;
+                }
+                .satooya-title {
+                    display: none;
+                }
+                .satooya-title-secound {
+                    display: block;
+                    left: 20%;
+                }
+            }
+            /* 里親コンテンツ */
+            .satooya-container {
+                padding: 0 10px;
+                .satooya-head {
+                    .satooya-head-title {
+                        width: 100%;
+                        h1 {
+                            font-size: 1.4em;
+                        }
+                    }
+                }
+
+            }
+            /* 各紹介ページ */
+            .satooya-info-container {
+                padding: 0 10px;
+                .satooya-info {
+                    .satooya-info-detail {
+                        padding: 0;
+                        .info-description {
+                            .info-description-content {
+                                flex-direction: column-reverse;
+                                padding: 5px;
+                                .info-description-display {
+                                    .detail-title {
+                                        text-align: center;
+                                        h2 {
+                                            margin: 10px 0;
+                                        }
+                                    }
+                                    .one-description {
+                                        h3 {
+                                            margin-left: 10px;
+                                        }
+                                        p {
+                                            margin: 10px;
+                                        }
+                                    }
+                                }
+                                aside {
+                                    width: 100%;
+                                }
+                            }
+                        }
+                    }
+
+                }
+            }
+            .satooya-list-bar {
+                .satooya-list-bar-title {
+                    padding: 10px;
+                }
+                .satooya-list-article {
+                    .carousel-container {
+                        .carousel {
+                            .card {
+                                flex: 0 0 calc(50% - 16px);
+                                .card-content {
+                                    .card-content-h3 {
+                                        flex-direction: column;
+                                        h3 {
+                                            font-size: 0.9em;
+                                            padding: 5px 0;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        button {
+                            display: none !important;
+                        }
+                    }
+
+                }
+            }
+        /* SHOPLIST */
+            .shoplist {
+                .shoplist-all {
+                        img {
+                            width: 100vw;
+                            height: 500px;
+                            overflow: hidden;
+                            object-position: 80% center;
+                            object-fit: cover;
+                        }
+                }
+                .shoplist-left {
+                    width: 80%;
+                    height: 100%;
+                    .shoplist-img {
+                        display: none;
+                    }
+                    .shoplist-title {
+                        top: 40%;
+                        h1 {
+                            background: var(--text-main);
+                        }
+                    }
+                }
+                .shoplist-messages {
+                    padding: 0 10px;
+                    margin: 50px 0;
+                    .shoplist-message {
+                        margin: 0;
+                        width: 100%;
+                        p {
+                            font-size: 1em;
+                            margin: 10px 0;
+                        }
+                    }
+                }
+            }
+            .cafe-service {
+                margin: 0;
+                .tabs {
+                    flex-wrap: wrap;
+                    row-gap: 10px;
+                    .tab-button {
+                        width: 30%;
+                    }
+                }
+                .photo {
+                    img {
+                        object-fit: cover;
+                    }
+                }
+            }
+
+            .store-list {
+                margin-top: 50px;
+                padding: 0 10px;
+                img {
+                    width: 100%;
+                }
+                .shop-name h1 {
+                    font-size: 2.4em;
+                }
+                .shop-info {
+                    h2 {
+                        margin: 0;
+                        font-size: 1.4em;
+                        text-align: center;
+                    }
+                    .store-list-detail{
+                        .info-detail {
+                            font-size: 0.8rem;
+                        }
+                        .shop-info-map {
+                            margin:  10px 0;
+                            iframe {
+                                width: 100%;
+                                height: 300px;
+                            }
+                        }
+                    }
+                }
+
+            }
+            /* CONTACT */
+            #container,container-top {
+                margin: 0;
+            }
+            #contact-wrapper {
+                padding: 0;
+                margin: 0;
+                .contact-title {
+                    padding: 0;
+                    height: 500px;
+                }
+                .contact-form {
+                    padding: 0 10px;
+                    margin: 50px 0;
+                }
+            }
+            /* NEWS/BLOG */
+            .news-list-top {
+                .news-list-top-content {
+                    .news-top-image {
+                        width: 100%;
+                        img {
+                            width: 100vw;
+                            height: 500px;
+                            overflow: hidden;
+                            object-position: 50% center;
+                            object-fit: cover;
+                        }
+                    } 
+                    .news-top-message {
+                        h1 {
+                            font-size: 3.2em;
+                        }
+                        p {
+                            font-size: 0.9em;
+                        }
+                    }
+                }
+            }
+            .home-content {
+                padding: 0;
+                .news-home-content, .blog-home-content {
+                    grid-template-columns: 1fr;
+                }
+            }
+            .news-blog-content {
+                display: block;
+                .article-container {
+                    width: 100%;
+                    padding: 0 10px;
+                    .article-title {
+                        font-size: 2em;
+                    }
+                }
+                .sidebar {
+                    display: none;
+                }
+            }
+
+            
+        }
+    }
+}
+/* スマホ 最低375px */

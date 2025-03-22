@@ -1,0 +1,132 @@
+/*
+背景色； #e3f9c6
+文字：   #516863
+背景色１：#516863　の時、文字：#f1fae5
+背景色２：#f1fae5
+ボタン：　#afe06e
+ */
+#contact-wrapper {
+    margin-top: 100px;
+}
+
+/* contact内容 */
+.contact-title {
+    background-image: url(../img/forest.jpg);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 800px;
+    padding: 50px;
+}
+.contact-title h2 {
+    color: #f1fae5;
+}
+.contact-title h2::after {
+    display: block;
+    content: "お問い合わせ";
+    font-size: 40px;
+}
+.contact-message {
+    position: relative;
+    top: 50%;
+}
+.contact-message p {
+    font-size: 30px;
+    color: #f1fae5;
+}
+.contact-form {
+    text-align: center;
+    margin-top: 50px;
+    padding: 0 100px;
+    font-family: none;
+}
+.contact-form h2 {
+    font-size: 30px;
+}
+.contact-form h2::after{
+    display: block;
+    content: "お問い合わせ内容に応じて、項目をご選択のうえ、お気軽にお問い合わせください。";
+    font-size: 15px;
+    margin: 15px 0;
+}
+.contact-form-detail {
+    background: #f1fae5;
+    /* height: 500px; */
+    padding: 50px 70px;
+}
+.contact-form h2 {
+    margin-top: 100px;
+}
+
+/* フォーム内容 */
+.form_area {
+    text-align: left;
+}
+.form_area .form-grid {
+    display: grid;
+    align-items:    center;
+    /* width 700px    height 320px */
+    grid-template-columns: 200px 500px;
+    grid-template-rows: 80px 80px 80px 80px;
+}
+.form_area .form-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+.form_area .form-content select,.form-text,.textarea{
+    padding: 10px;
+    border-bottom: #516863 solid 2px;
+    border-radius: 5px;
+    background-color: #fff;
+    width: 100%;
+}
+.form-message {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 200px 500px;
+}
+.form-message .textarea {
+    min-height: 300px;
+    resize: none;
+    field-sizing:  content;
+}
+/* 概要・送信 */
+.form-bottom {
+    margin-top: 50px;
+}
+.form-bottom p {
+    line-height: 2rem;
+}
+.form-submit {
+    max-width: 300px;
+    width: 100%;
+    margin-top: 50px;
+    padding: 15px 0;
+    background: #afe06e;
+    border: #afe06e solid 2px;
+    border-radius: 30px;
+    font-weight: bold;
+}
+.form-submit:hover {
+    transition: 0.8s;
+    background: #f1fae5;
+    border: #afe06e solid 2px;
+}
+
+@media screen and (max-width: 1200px ) {
+    .contact-form-detail {
+        padding: 40px 20px;
+    }
+    .form_area {
+        text-align: center;
+        .form-content {
+            width: 100%;
+        }
+    }
+
+    .form_area .form-grid, .form-message {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        gap: 10px;
+    }
+}

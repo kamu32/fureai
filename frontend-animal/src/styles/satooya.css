@@ -1,0 +1,633 @@
+/* 里親TOP */
+.satooya-top-content {
+    position: relative;
+    margin-top: 55px;
+}
+.satooya-top {
+    width: 100%;
+    position: relative;
+    background: #f1f1f1;
+}
+.satooya-top .top-img {
+    opacity: 0.7;
+}
+.satooya-bottom-img {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+.top-img, .bottom-img{
+    width: 100%;
+}
+.satooya-title {
+    position: absolute;
+    top: 30%;
+    font-weight: bold;
+    margin-left: 120px;
+    padding: 70px;
+}
+.satooya-title h1 {
+    font-size: 40px;
+    color: #f1f1f1;
+}
+.satooya-title h2 {
+    font-size: 15px;
+    color: #f1f1f1;
+    margin-top: 5px;
+}
+.satooya-title-secound {
+    display: none;
+    position: absolute;
+    writing-mode: vertical-rl;
+    top: 5%;
+    left: 40%;
+    .satooya-title-h {
+        text-orientation: upright;
+    }
+    h1 {
+        font-size: 2.1em;
+        color: var(--moji-white);
+    }
+    h2 {
+        margin: 5px;
+        font-size: 1em;
+        color: var(--moji-white);
+    }
+}
+/* 里親コンテンツ */
+.satooya-container {
+    max-width: 1200px;
+    margin: 25px auto;
+    .satooya-content {
+        padding-bottom: 25px;
+    }
+}
+.satooya-container {
+    .satooya-head {
+        width: 100%;
+        display: flex;
+        align-items: end;
+        .satooya-head-title {
+            min-width: 30%;
+            padding: 20px 0 20px 50px;
+            background-color: #516863;
+            clip-path: polygon(0% 100%, 0% 0%, 80% 0%, 100% 100%);
+        }
+    }
+    .satooya-total-text {
+        font-size: 1.4em;
+        letter-spacing: 0.1em;
+        padding: 20px 0 0 20px;
+    }
+    span {
+        font-weight: bold;
+        font-size: 2.2em;
+        padding: 0 20px;
+    }
+}
+.satooya-container .satooya-head h1 {
+    color: #f1f1f1;
+    font-size: 30px;
+}
+
+/* 保護動物カード */
+.satooya-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;;
+    padding:25px;
+}
+.satooya-list a:hover {
+    opacity: 0.7;
+}
+.animal-card {
+    position: relative;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.35);
+    background-color: #f1f1f1;
+    /* border: 1px solid #516863; */
+    border-radius: 50px;
+}
+.animal-card .animal-img {
+    background-color: #e0e0e0;
+    border-radius: 50px 50px 0 0;
+    width: 270px;
+    height: 215px;
+}
+.animal-card .animal-img img {
+    border-radius: 50px 50px 0 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.animal-card .tags {
+    width: 100%;
+    position: absolute;
+    top: 65%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.animal-card .tags .animal-tag {
+    padding: 5px 10px;
+    margin: 0 5px;
+    background-color: var(--button-detail);
+    border-radius: 50px;
+    color: var(--moji-white);
+    font-size: 0.8em;
+}
+.animal-card .animal-name, .animal-card .animal-address {
+    text-align: center;
+    padding: 5px 0;
+}
+.animal-card .animal-name h2{
+    font-size: 1.4em;
+    font-weight: bold;
+}
+.pagination {
+    max-width: 30%;
+    margin: 0 auto;
+}
+.pagination a {
+    display: inline-block;
+    padding: 8px 12px;
+    margin: 0 2px;
+    text-decoration: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.pagination a.active {
+    background-color: #b58958;
+    color: white;
+}
+/* satooya-footer */
+.satooya-footer {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.satooya-footer img {
+    width: 100%;
+}
+
+@media screen and (max-width: 1200px) {
+                /* SATOOYA PAGE */
+                .satooya-top-content {
+                    .satooya-title {
+                        display: none;
+                    }
+                    .satooya-title-secound {
+                        display: block;
+                    }
+                }
+                .satooya-container {
+                    padding:  0 20px;
+                }
+    
+}
+
+/* satooya-info */
+.satooya-pet-img {
+    width: 100%;
+    background: #f1f1f1;
+}
+.satooya-pet-img img{
+    width: 100%;
+    opacity: 0.7;
+}
+.satooya-info-main {
+    margin: 100px 0;
+}
+.satooya-info-container {
+    display: flex;
+    justify-content: center;
+    padding: 0 25px;
+
+}
+.satooya-info {
+    width: 100%;
+    background: #f1f1f1;
+    border-radius: 30px;
+    .satooya-info-detail {
+        padding: 20px 25px;
+    }
+    /* contact-button */
+    .info-contact-button {
+        width: 320px;
+        margin: 50px auto;
+        a{
+        padding: 10px  20px  10px 35px;
+        background: #93bd5d;
+        color: #f1f1f1;
+        }
+    }
+    .info-top-button {
+        margin: 0;
+    }
+    .info-contact-button a:hover {
+        opacity: 0.7;
+    }
+}
+.satooya-info img {
+    width: 100%;
+}
+.info-date {
+    text-align: right;
+}
+.info-content {
+    color: #516863;
+}
+.info-one {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,175px);
+}
+.info-name {
+    padding: 5px 0 5px 5px ;
+    border: #516863 solid 1px;
+}
+.info-p {
+    padding: 30px 0 5px 0;
+}
+.info-content table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed; /* 固定レイアウト */
+}
+.info-content th, td {
+    border: 1px solid #ccc;
+    padding: 15px;
+    word-wrap: break-word;/* テキストが長い場合に折り返す */
+    vertical-align: middle; 
+}
+.info-content th {
+    background-color: #f4f4f4;
+    letter-spacing: 0.3em;
+    text-align: center;
+}
+.info-content p {
+    line-height: 2;
+}
+.info-contact {
+    .attenstion-message {
+        padding: 0 25px;
+    }
+    .attenstion-message p{
+        padding:  25px 50px;
+        line-height: 2.5em;
+        background: #e7e7e7;
+        border-radius: 25px;
+    }
+}
+/* sidebar */
+.sidebar {
+    width: 400px;
+    margin-left: 20px;
+    /* 連携している会社のバナー */
+    .contract-baner {
+        padding: 5px 0;
+        .contract-company {
+            width: 100%;
+            margin-top: 5px;
+            padding: 20px;
+            background: #90bab0;
+            border-radius: 10px;
+        }
+        .contract-company p {
+            color: #f1f1f1;
+            text-align: center;
+            font-size: 1.5em;
+        }
+    }
+
+}
+.sidebar-article {
+    background: #f1f1f1;
+}
+.new-satooya-title {
+    background-color: #516863;
+    color: #f1f1f1;
+    text-align: center;
+    font-size: 1.4em;
+    padding: 10px 0;
+}
+.animals-list-content {
+    padding: 5px;
+    border-bottom: #516863 solid 3px;
+}
+.animals-list-content:hover{
+    opacity: 0.8;
+    background-color: #afe06e;
+    transition: 0.6s;
+}
+.animals-list-content img {
+    width: 100%;
+}
+.animals-one {
+    padding: 20px 0;
+}
+.animals-one .animals-name {
+    text-align: center;
+    padding: 5px 0;
+}
+
+
+/* 動物の各紹介ページ */
+.satooya-info-container {
+    display: block;
+    .route-satooya {
+        display: flex;
+        color: var(--text-main);
+        p {
+            margin-right: 10px;
+        }
+        a {
+            margin-right: 10px;
+            border-bottom: var(--text-main) solid 2px;
+        }
+    }
+    .satooya-info {
+        background: none;
+        .satooya-info-top {
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            .pet-img {
+                flex:1;
+                margin-right: 50px;
+                img {
+                    width: 100%;
+                    aspect-ratio: 1/1;
+                    object-fit: cover;
+                }
+            }
+            .info-top {
+                display: block;
+                width: 500px;
+                .info-date {
+                    text-align: left;
+                }
+                .info-h {
+                    font-size: 2.6em;    
+                    padding: 20px 0;
+                    font-weight: bold;
+                }
+                .info-content {
+                    padding: 0 15px;
+                    .info-address {
+                        font-size: 1.2em;
+                        font-weight: 600;
+                        border-bottom: var(--text-main) solid 1px;
+                        margin-bottom: 5px;
+                    }
+                    table {
+                        tr {
+                            font-size: 1.1em;
+                            th {
+                                background: none;
+                            }
+                        }
+                    }
+                    .top-table {
+                        tr {
+                            th,td {
+                                border: none;
+                                padding: 15px 0;
+                                text-align: left;
+                            }
+                            td {
+                                text-align: center;
+                            }
+                            td:nth-child(2) {
+                                width: 200px; /* 2列目だけ広げる */
+                            }
+                        }
+                    }
+                }
+                .info-top-button {
+                        margin-top: 50px;
+                }
+            }
+        }
+        /* Description */
+        .info-description {
+            margin: 100px 0;
+            .detail-title {
+                h2 {
+                    font-size: 2.5em;
+                    font-weight: 500;
+                    margin-bottom: 30px;
+                    padding: 10px 20px;
+                }
+                /* border-bottom: var(--text-main) solid 2px; */
+            }
+            .info-description-content {
+                display: flex;
+                box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+                background: var(--moji-white);
+                padding: 15px 15px 0 25px;
+                .info-description-display {
+                    padding: 0;
+                    margin: 0;
+                    .one-description {
+                        padding: 10px 0;
+                        h3 {
+                            padding: 0 5px;
+                            font-size: 1.5em;
+                            border-left: #90bab0 solid 5px;
+                            border-radius: 5px;
+                        }
+                        p {
+                            font-size: 1em;
+                            line-height: 1.6em;
+                            padding: 15px;
+                            opacity: 0.9;
+                            margin: 15px;
+                            background: #e7e7e7;
+                            border-radius: 10px;
+                        }
+                    } 
+                }
+                aside {
+                    opacity: 0.9;
+                    padding: 30px 15px;
+                    width: 400px;
+                    height: 350px;
+                    background: rgba(241, 241, 241, 0.8);
+                    border-radius: 15px;
+                    border: var(--text-main) solid 2px;
+                    h2 {
+                        color: var(--text-main);
+                        font-size: 1.6em;
+                        text-align: center;
+                        margin-bottom: 25px;
+                    }
+                    .healthy-description {
+                        background: var(--moji-white);
+                        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+                        border-bottom: var(--text-main) solid 2px;
+                        padding: 5px 10px;
+                        margin-bottom: 20px;
+                        h3,p {
+                            font-size: 0.9em;
+                            color: var(--text-main);
+                        }
+                        h3 {
+                            font-weight: bold;
+                            letter-spacing: 0.1em;
+                        }
+                        p {
+                            text-align: right;
+                        }
+
+                    }
+                    .healthy-info {
+                        table {
+                            tr {
+                                color: var(--moji-white);
+                                th {
+                                    background: none;
+                                }
+                                th,td {
+                                    border: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}
+.satooya-list-article {
+    display: flex;
+    justify-content: center;
+}
+.satooya-list-bar {
+    padding: 0;
+    .slide-scroll {
+        display: inline-block;
+        text-align: left;
+    }
+    .satooya-list-bar-title {
+        font-size: 1.5em;
+        font-weight: bold;
+        letter-spacing: 0.1em;
+        text-align: center;
+        padding: 10px 0;
+    }
+    .carousel-container {
+        width: 100%; /* カード4枚＋余白が収まる幅 */
+        overflow: hidden; /* はみ出さないようにする */
+        position: relative;
+        padding: 10px 0;
+        .carousel {
+            margin: 0 auto; /* 中央寄せ */
+            padding: 10px 0;
+            width: 90%;
+            display: flex;
+            gap: 21px;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            white-space: nowrap;
+            scrollbar-width: none; /* Firefoxでスクロールバー非表示 */
+            .card {
+                flex: 0 0 calc(25% - 16px);
+                background: var(--moji-white);
+                border-radius: 8px;
+                overflow: hidden;
+                text-decoration: none;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                scroll-snap-align: start;
+                img {
+                    width: 100%;
+                    aspect-ratio: 4/3;
+                    object-fit: cover;
+                }
+                .card-content {
+                    padding: 10px;
+                    color: var(--text-main);
+                    .card-content-h3 {
+                        display: flex;
+                        justify-content: space-between;
+                        margin-bottom: 10px;
+                        h3 {
+                            font-size: 1.2em;
+                            font-weight: bold;
+                        }
+                    }
+        
+                    p {
+                        font-size: 0.9em;
+                    }
+                }
+            }
+            .card:hover {
+                opacity: 0.7;
+            }
+        }
+        .carousel::-webkit-scrollbar {
+            display: none; /* Chrome, Safariでスクロールバー非表示 */
+        }
+        .prev-btn, .next-btn {
+            height: 90%;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 3em;
+            padding: 10px;
+            border: none;
+            background-color: var(--moji-white);
+            cursor: pointer;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            z-index: 10;
+        }
+        .prev-btn { left: 15px; }
+        .next-btn { right: 15px; }
+    }
+
+}
+
+@media screen and (max-width: 900px) {
+    .satooya-info-container {
+        padding: 0 10px;
+        .route-satooya {
+            padding-bottom: 10px;
+            flex-direction: row-reverse;
+        }
+        .satooya-info {
+            .satooya-info-detail {
+                padding: 0;
+                .satooya-info-top {
+                    flex-direction: column;
+                    .pet-img {
+                        margin: 0;
+                    }
+                    .info-top {
+                        width: 100%;
+                        .info-date {
+                            text-align: right;
+                            padding: 10px 0;
+                        }
+                        .info-h {
+                            text-align: center;
+                        }
+                        .info-content {
+                            .info-address {
+                                text-align: center;
+                            }
+                        }
+                        .info-contact-button {
+                            margin: 50px auto;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+    
+}

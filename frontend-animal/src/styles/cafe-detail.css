@@ -1,0 +1,71 @@
+.shoplist-message {
+    display: none;
+}
+.store-top-img {
+    width: 100%;
+}
+.store-list {
+    position: relative;
+    z-index: 5;
+    padding: 0 100px;
+}
+.shop-name {
+    margin: 50px 0;
+    text-align: center;
+}
+.store-list h2 {
+    margin-top: 200px;
+    
+}
+.store-list-detail {
+    margin: 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.shop-info-map {
+    margin-right: 20px;
+    iframe {
+        width: 450px;
+        height: 450px;
+    }
+}
+.info-detail {
+    display: grid;
+    grid-template-columns: 150px 450px;
+    padding: 20px 0;
+    border-bottom: solid #516863 1px;
+    font-size: 1.1rem;
+
+}
+
+.detail-h {
+    width: 100%;
+    text-align: center;
+    /* border-right: solid #516863 1px; */
+} 
+.detail-p {
+    padding: 0 50px;
+}
+
+.detail-button {
+    text-align: right;
+}
+.detail-button a{
+    font-size: 0.9rem;
+}
+@media screen and (max-width: 1100px) {
+    .store-list-detail {
+        padding: 0 10px;
+        margin: 50px 0;
+        flex-direction: column-reverse;
+        .info-detail {
+            display: grid;
+            grid-template-columns: 1fr;
+            border-bottom: solid #516863 1px;
+            .detail-h {
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
