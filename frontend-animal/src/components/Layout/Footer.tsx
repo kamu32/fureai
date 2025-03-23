@@ -4,46 +4,44 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
-    <footer className="bg-pugeat-dark-green text-white pt-16 pb-8">
-      <div className="container mx-auto px-4 md:px-6">
-        <div className="flex flex-col md:flex-row justify-between pb-8 border-b border-white/20">
-          <div className="mb-8 md:mb-0">
-            <Link to="/" className="inline-block mb-4">
-              <img 
-                src="/lovable-uploads/5e3a71a2-4dea-48ab-a8a7-c0c3f83cf3c2.png" 
-                alt="Pugeat Logo" 
-                className="h-10 w-auto brightness-[200]"
-              />
-            </Link>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
-            <div>
-              <h3 className="text-white font-medium mb-4">私たちについて</h3>
-              <ul className="space-y-2">
-                <li><Link to="/about" className="hover:text-pugeat-green transition-colors">会社概要</Link></li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="text-white font-medium mb-4">サービス</h3>
-              <ul className="space-y-2">
-                <li><Link to="/service/foster" className="hover:text-pugeat-green transition-colors">ペットの里親募集</Link></li>
-                <li><Link to="/service/shops" className="hover:text-pugeat-green transition-colors">動物と過ごせるお店</Link></li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="text-white font-medium mb-4">ニュース</h3>
-              <ul className="space-y-2">
-                <li><Link to="/news" className="hover:text-pugeat-green transition-colors">ニュース一覧</Link></li>
-                <li><Link to="/blog" className="hover:text-pugeat-green transition-colors">ブログ一覧</Link></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div className="flex flex-col md:flex-row justify-between items-center mt-8">
+    <footer id="footer">
+    <div className="footer-logo">
+        <a href="/">
+            <img src="/img/footer-logo.png" alt="Footer Logo" />
+        </a>
+    </div>
+    <div className="footer-navigation">
+        <nav>
+            <ul>
+                <li>
+                    <h3>私たちについて</h3>
+                    <ul className="footer-submenu">
+                        <li><a href="/about">ー制作中ー</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>サービス</h3>
+                    <ul className="footer-submenu">
+                        <li><a href="/stores">店舗紹介</a></li>
+                        <li><a href="/satooya">里親募集</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>ニュース</h3>
+                    <ul className="footer-submenu">
+                        <li><a href="/news-list">ニュース一覧</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>ブログ</h3>
+                    <ul className="footer-submenu">
+                        <li><a href="/news-list">記事一覧</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+        {/* <div className="flex flex-col md:flex-row justify-between items-center mt-8">
           <p className="text-sm text-white/70 mb-4 md:mb-0">© {new Date().getFullYear()} Pugeat All Rights Reserved.</p>
           <div className="flex space-x-4">
             <a href="#" className="text-white hover:text-pugeat-green transition-colors">
@@ -65,9 +63,8 @@ const Footer = () => {
               </svg>
             </a>
           </div>
-        </div>
-      </div>
-    </footer>
+        </div> */}
+      </footer>
   );
 };
 

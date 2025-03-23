@@ -507,11 +507,11 @@
         font-size: 0.4em;
     }
 }
-.header-menu {
+/* .header-menu {
     .header-span {
         font-size: 0.8em !important;
     }
-}
+} */
 .header-menu nav ul li .nav-text::after{
     content: "";
     position:absolute;
@@ -773,6 +773,44 @@ body.no-scroll {
 
 /* フッター */
 /* footer*/
+#footer {
+    width: 100%;
+    background-color: var(--footer-bg);
+    padding: 50px 120px 25px 120px;
+    display: flex;
+    justify-content: space-between;
+    nav {
+        margin-right: 50px;
+    }
+    ul {
+        display: flex;
+        li {
+            padding: 0 20px;
+            color: var(--moji-white);
+            h3 {
+            font-size: 1em;
+            font-weight: bold;
+            color: var(--moji-white);
+            letter-spacing: 0.3em;
+            }
+            .footer-submenu {
+                display: block;
+                padding: 15px 0;
+                li {
+                    font-size: 0.8em;
+                    margin-bottom: 20px;
+                }
+                a::before {
+                    content: "－";
+                    padding: 0 2px;
+                }
+                a:hover {
+                    opacity: 0.7;
+                }
+            }
+        }
+    }
+}
 #footer .footer-logo {
     max-width: 150px;
     aspect-ratio: 340/102;

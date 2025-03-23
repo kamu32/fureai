@@ -43,11 +43,12 @@
   body {
     @apply bg-pugeat-bg text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
+    font-family: "Concert One","Kosugi Maru", sans-serif;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  /* h1, h2, h3, h4, h5, h6 {
     @apply font-serif font-bold text-pugeat-dark-green;
-  }
+  } */
 }
 
 /* カスタムコンポーネントスタイル */

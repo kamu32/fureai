@@ -16,19 +16,19 @@ const newsItems: NewsItem[] = [
     id: 1,
     title: '動物保護団体の取組みについて',
     date: '2023年6月15日',
-    image: '/lovable-uploads/photo-1493962853295-0fd70327578a.jpg'
+    image: '/img/IMGBOX.png'
   },
   {
     id: 2,
     title: 'みなさんにアイデアに助けられた時、どうしていますか？',
     date: '2023年5月21日',
-    image: '/lovable-uploads/photo-1452378174528-3090a4bba7b2.jpg'
+    image: '/img/IMGBOX.png'
   },
   {
     id: 3,
     title: '私たちの夢の一部を一緒に実現させるために',
     date: '2023年4月10日',
-    image: '/lovable-uploads/photo-1487252665478-49b61b47f302.jpg'
+    image: '/img/IMGBOX.png'
   }
 ];
 

@@ -65,6 +65,36 @@ app.get('/news-list/*', (req, res) => {
         res.status(500).send("Internal Server Error");
     }
 });
+app.post('/send-mail', async (req, res) => {
+    const { name, email, subject, message, isSubmitting } = req.body;
+    // Nodemailerの設定
+    const transporter = nodemailer.createTransport({
+        service: 'gmail', // Gmailを使用（他のSMTPサーバーも可）
+        auth: {
+            user: process.env.EMAIL_USER,
+            pass: process.env.EMAIL_PASS 
+        }
+    });
+
+    if (!name || !email || !content) {
+        return res.status(400).json({ error: 'お名前、メールアドレス、お問い合わせ内容は必須です。' });
+    }
+    // メールの内容
+    const mailOptions = {
+        from:  "${name}", // フォームの送信者
+        to: `${process.env.EMAIL_USER}`, // 自分のメールアドレス
+        subject: `お問い合わせ: ${subject}`,
+        text: `お問い合わせ項目: ${subject}\n\nお名前: ${name}\nメールアドレス: ${email}\n電話番号: ${isSubmitting}\n\nお問い合わせ内容:\n${message}`
+    };
+
+    try {
+        await transporter.sendMail(mailOptions);
+        res.status(200).json({ message: 'メールが送信されました！' });
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ message: 'メール送信に失敗しました。' });
+    }
+});
 
 // サーバー起動
 const PORT = process.env.PORT || 5000;
