@@ -112,7 +112,7 @@
                     text-align: center;
                 }
                 .footer-logo {
-                    margin-bottom: 20px;
+                    margin:0 auto 20px auto;
                     img {
                         max-width: 130px;
                     }

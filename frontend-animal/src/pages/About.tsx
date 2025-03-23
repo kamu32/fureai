@@ -3,38 +3,11 @@ import React, { useEffect, useRef } from 'react';
 import Layout from '../components/Layout/Layout';
 
 const About = () => {
-  const headerRef = useRef<HTMLDivElement>(null);
-  const contentRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('animate-fade-in');
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-
-    if (headerRef.current) observer.observe(headerRef.current);
-    if (contentRef.current) observer.observe(contentRef.current);
-
-    return () => {
-      if (headerRef.current) observer.unobserve(headerRef.current);
-      if (contentRef.current) observer.unobserve(contentRef.current);
-    };
-  }, []);
-
   return (
     <Layout>
       <div className="pt-24 pb-20 bg-pugeat-light-green">
         <div 
-          ref={headerRef} 
+          // ref={headerRef} 
           className="container mx-auto px-4 py-16 opacity-0"
         >
           <h1 className="text-4xl md:text-5xl font-bold text-center mb-6">ABOUT US</h1>
@@ -46,7 +19,7 @@ const About = () => {
 
       <div className="py-20">
         <div 
-          ref={contentRef} 
+          // ref={contentRef} 
           className="container mx-auto px-4 max-w-4xl opacity-0"
         >
           <h2 className="text-3xl font-bold mb-8 text-center">私たちの使命</h2>

@@ -7,7 +7,7 @@ require('dotenv').config();
 const authRoutes = require('./routes/authRoutes');
 const userRoutes = require('./routes/userRoutes');
 const dataRoutes = require('./routes/dataRoutes');
-const myRouter = require('./routes/myrouter');
+// const myRouter = require('./routes/myrouter');
 
 const app = express();
 app.use(express.json());
@@ -20,16 +20,16 @@ mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
     .catch(err => console.error('MongoDB connection error:', err));
 
 // ルーティング
-app.use('/', myRouter);
-app.use('/api/auth', authRoutes);
-app.use('/api/users', userRoutes);
-app.use('/api/data', dataRoutes);
+// app.use('/', myRouter);
+// app.use('/api/auth', authRoutes);
+// app.use('/api/users', userRoutes);
+// app.use('/api/data', dataRoutes);
 
 // フロントエンド（ユーザー向けサイト）を提供
-app.use(express.static(path.join(__dirname, '../frontend/build')));
-app.get('/', (req, res) => {
+app.use(express.static(path.join(__dirname, '../frontend-animal/dist')));
+app.get('/*', (req, res) => {
     try {
-        res.sendFile(path.join(__dirname, '../frontend/build', 'index.html'));
+        res.sendFile(path.join(__dirname, '../frontend-animal/dist', 'index.html'));
         console.log("✅ Frontend is served successfully.");
     }catch (error) {
         console.log("❌ Error serving frontend:", error);
@@ -55,8 +55,8 @@ app.get('/admin/*', (req, res) => {
     }
 });
 // ブログ記事を提供
-app.use('/news-list', express.static(path.join(__dirname, '../article-hive-portal/dist')));
-app.get('/news-list/*', (req, res) => {
+app.use('/blog', express.static(path.join(__dirname, '../article-hive-portal/dist')));
+app.get('/blog/*', (req, res) => {
     try {
         res.sendFile(path.join(__dirname, '../article-hive-portal/dist', 'index.html'));
         console.log("✅ Blog is served successfully.");

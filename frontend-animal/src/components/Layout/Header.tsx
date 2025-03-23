@@ -4,28 +4,30 @@ import { Link } from 'react-router-dom';
 import { Menu } from 'lucide-react';
 
 const Header = () => {
-  const [scrolled, setScrolled] = useState(false);
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+const [scrolled, setScrolled] = useState(false);
+const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
-    };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+// Header scrool
+useEffect(() => {
+        const handleScroll = () => {
+        if (window.scrollY > 50) {
+            setScrolled(true);
+        } else {
+            setScrolled(false);
+        }
+        };
 
-  return (
-    <header id="header"
-      className={`header ${
-        scrolled ? 'bg-white/90 backdrop-blur-sm shadow-sm py-3' : 'bg-transparent py-5'
-      }`}
-    >
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
+    return (
+        <header id="header"
+        className={`header ${
+            scrolled ? 'bg-white/90 backdrop-blur-sm shadow-sm py-3' : 'bg-transparent py-5'
+        }`}
+        >
             <div className="header-content">
                 <div className="header-logo">
                     <a href="/">
@@ -54,8 +56,8 @@ const Header = () => {
                                 </ul>
                             </li>
                             <li className="nav-news">
-                                <a href="/news-list" className="nav-text">
-                                    <span className="header-span">ニュース・ブログ</span><br />news・blog
+                                <a href="/blog" className="nav-text">
+                                    <span className="header-span">ブログ</span><br />blog
                                 </a>
                             </li>
                         </ul>
@@ -107,10 +109,10 @@ const Header = () => {
                                 </ul>
                             </li>
                             <li className="menu-li">
-                                <a href="/news-list" className="menu-title">NEWS・BLOG<br /><span>ニュース・ブログ</span></a>
+                                <a href="/blog" className="menu-title">BLOG<br /><span>ブログ</span></a>
                                 <ul className="menu-sub">
                                     <li>
-                                        <a href="/news-list" className="sub-text">ニュース・ブログ</a>
+                                        <a href="/blog" className="sub-text">ブログ</a>
                                     </li>
                                 </ul>
                             </li>

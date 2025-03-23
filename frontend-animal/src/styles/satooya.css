@@ -55,6 +55,9 @@
     }
 }
 /* 里親コンテンツ */
+#satooya-list {
+    margin: 0;
+}
 .satooya-container {
     max-width: 1200px;
     margin: 25px auto;

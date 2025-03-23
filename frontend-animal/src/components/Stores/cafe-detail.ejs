@@ -1,0 +1,48 @@
+<div class="store-list">
+    <% if (store) { %>
+            <img src="/img/Stores/store-img/IMGBOX.png" alt="<%= store.store_name %>" class="store-top-img">
+            <div class="shop-name"><h1><%= store.store_name %></h1></div>
+            <div class="shop-info">
+                <h2>店舗紹介</h2>
+                <div class="store-list-detail">
+                    <div class="shop-info-map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6477.651152793947!2d139.709481!3d35.730508!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188d5db0ffed3b%3A0x655d359d0295d9cc!2z54yr44Kr44OV44KnIE1PQ0hBICjjg6Ljgqsp5rGg6KKL5pys5bqX!5e0!3m2!1sja!2sjp!4v1733398251457!5m2!1sja!2sjp"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <div class="shop-info-detail">
+                        <!-- 店舗名 -->
+                        <div class="info-detail">
+                            <div class="detail-h">店舗名</div>
+                            <div class="detail-p"><%= store.store_name %></div>
+                        </div>
+                        <!-- 住所 -->
+                        <div class="info-detail">
+                            <div class="detail-h">住所</div>
+                            <div class="detail-p"><%= store.store_address %></div>
+                        </div>
+                        <!-- 詳細 -->
+                        <div class="info-detail">
+                            <div class="detail-h">詳細</div>
+                            <div class="detail-p"><%- store.description %></div>
+                        </div>
+                        <!-- 電話番号-->
+                        <div class="info-detail">
+                            <div class="detail-h">電話番号</div>
+                            <div class="detail-p"><%= store.store_phone %></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <img src="/img/Stores/store-img/IMGBOX.png" alt="<%= store.store_name %>">
+            <h3><%= store.store_name %></h3>
+            <p>住所: <%= store.store_address %></p>
+            <p>詳細: <%= store.description %></p>
+            <p>電話番号: <%= store.store_phone %></p> -->
+            <div class="detail-button"><a href="/stores" class="box">店舗一覧に戻る</a></div>
+            </div>
+
+    <% } else { %>
+        <p style="height: 100vh;">現在、この地域には店舗がありません。</p>
+    <% } %>
+
+
+</div>

@@ -1,0 +1,148 @@
+<div class="reccomend-content">
+    <h2>まだ、動物たちに興味がある方。<br>
+    まずは、こちらのサービスをお試しください。</h2>
+    <div class="main-content">
+        <a href="/satooya">
+        <div class="first-content">
+            <!-- 店舗紹介 -->
+            <div class="content-img box">
+                <img src="./img/IMGBOX.png" class="box">
+                <div class="message"><h3>ペットを迎え入れたい方</h3></div>
+            </div>
+        </div>
+        </a>
+        <a href="/blog">
+            <div class="second-content">
+                <!-- ニュース・記事 -->
+                <div class="content-img box">
+                    <img src="./img/IMGBOX.png" class="box">
+                    <div class="message"><h3>動物について知りたい方</h3></div>
+                    
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="reccomend-bottom"><img src="./img/Animals/satooya-bottom.png"></div>
+</div>
+<main id="main-area" class="max-width-1400px" >
+        <!-- CAFE SHOPLIST -->
+        <div class="cafe-service">
+            <div class="tabs">
+                <button class="tab-button" data-region="Hokkaido">北海道</button>
+                <button class="tab-button" data-region="Touhoku">東北</button>
+                <button class="tab-button" data-region="Kanto">関東</button>
+                <button class="tab-button" data-region="Kinki">近畿</button>
+                <button class="tab-button" data-region="Tyukoku-Sikoku">中国・四国</button>
+                <button class="tab-button" data-region="Kyuushu">九州</button>
+            </div>
+
+            <div class="store-list">
+                <!-- 北海道 -->
+                <div class="tab-content" id="Hokkaido">
+                    <div class="cafe-list">
+                        <% stores.forEach(store => { %>
+                            <% if (store.regions === '北海道') { %>
+                                <a href="/stores/<%= store.id %>">
+                                <div class="cafe-item">
+                                    <div class="photo"><img src='./img/Stores/store-img/<%= store.store_img %>'></div>
+                                    <div class="cafe-information">
+                                        <h2><%= store.store_name %></h2>
+                                        <div class="cafe-detail"><p><%= store.store_address %></p></div>
+                                    </div>
+                                </div>
+                                </a>
+                            <% } %>
+                        <% }) %>
+                    </div>
+                </div>
+                <div class="tab-content" id="Touhoku">
+                    <div class="cafe-list">
+                        <% stores.forEach(store => { %>
+                            <% if (store.regions === '東北') { %>
+                                <a href="/stores/<%= store.id %>">
+                                <div class="cafe-item">
+                                    <div class="photo"><img src='./img/Stores/store-img/<%= store.store_img %>'></div>
+                                    <div class="cafe-information">
+                                        <h2><%= store.store_name %></h2>
+                                        <div class="cafe-detail"><p><%= store.store_address %></p></div>
+                                    </div>
+                                </div>
+                                </a>
+                            <% } %>
+                        <% }) %>
+                    </div>
+                </div>
+                <div class="tab-content" id="Kanto">
+                    <div class="cafe-list">
+                        <% stores.forEach(store => { %>
+                            <% if (store.regions === '関東') { %>
+                                <a href="/stores/<%= store.id %>">
+                                <div class="cafe-item">
+                                    <div class="photo"><img src='./img/Stores/store-img/<%= store.store_img %>'></div>
+                                    <div class="cafe-information">
+                                        <h2><%= store.store_name %></h2>
+                                        <div class="cafe-detail"><p><%= store.store_address %></p></div>
+                                    </div>
+                                </div>
+                                </a>
+                            <% } %>
+                        <% }) %>
+                    </div>
+                </div>
+                <div class="tab-content" id="Kinki">
+                    <div class="cafe-list">
+                        <% stores.forEach(store => { %>
+                            <% if (store.regions === '近畿') { %>
+                                <a href="/stores/<%= store.id %>">
+                                <div class="cafe-item">
+                                    <div class="photo"><img src='./img/Stores/store-img/<%= store.store_img %>'></div>
+                                    <div class="cafe-information">
+                                        <h2><%= store.store_name %></h2>
+                                        <div class="cafe-detail"><p><%= store.store_address %></p></div>
+                                    </div>
+                                </div>
+                                </a>
+                            <% } %>
+                        <% }) %>
+                    </div>
+                </div>
+                <div class="tab-content" id="Tyukoku-Sikoku">
+                    <div class="cafe-list">
+                        <% stores.forEach(store => { %>
+                            <% if (store.regions === '中国・四国') { %>
+                                <a href="/stores/<%= store.id %>">
+                                <div class="cafe-item">
+                                    <div class="photo"><img src='./img/Stores/store-img/<%= store.store_img %>'></div>
+                                    <div class="cafe-information">
+                                        <h2><%= store.store_name %></h2>
+                                        <div class="cafe-detail"><p><%= store.store_address %></p></div>
+                                    </div>
+                                </div>
+                                </a>
+                            <% } %>
+                        <% }) %>
+                    </div>
+                </div>
+                <div class="tab-content" id="Kyuushu">
+                    <div class="cafe-list">
+                        <% stores.forEach(store => { %>
+                            <% if (store.regions === '九州') { %>
+                                <a href="/stores/<%= store.id %>">
+                                <div class="cafe-item">
+                                    <div class="photo"><img src='./img/Stores/store-img/<%= store.store_img %>'></div>
+                                    <div class="cafe-information">
+                                        <h2><%= store.store_name %></h2>
+                                        <div class="cafe-detail"><p><%= store.store_address %></p></div>
+                                    </div>
+                                </div>
+                                </a>
+                            <% } %>
+                        <% }) %>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+<div class="content-footer"><img src="./img/Stores/Forte.png" class="footer-img"></div>

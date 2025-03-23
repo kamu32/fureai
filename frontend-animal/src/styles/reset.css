@@ -54,6 +54,7 @@ body {
 
 main {
   display: block;
+  background: var(--background-main);
 }
 
 /* Vertical rhythm */

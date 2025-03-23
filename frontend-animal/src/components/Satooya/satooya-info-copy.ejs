@@ -1,0 +1,163 @@
+
+<% if (animal) { %>
+<div class="satooya-info-main ">
+        <!-- 各保護動物を表示 -->
+    <div class="satooya-info-container max-width-1200px">
+        <div class="route-satooya">
+            <a href="/satooya">里親募集</a>
+            <p> > </p>
+            <a href="/satooya/<%= animal.id %>"><%= animal.id %></a>
+        </div>
+        <div class="satooya-info">
+            <div class="satooya-info-detail">
+                <div class="satooya-info-top">
+                    <div class="pet-img"><img src="/img/Animals/animal-img/<%= animal.animal_img %>"></div>
+                    <div class="info-top">
+                        <p class="info-date">掲載日 <%= new Date(animal.createdAt).toLocaleDateString('ja-JP', { year: 'numeric', month: 'long', day: 'numeric' }) %></p>
+                        <h2 class="info-h"><%= animal.animal_name%></h2>
+                        <div class="info-content">
+                            <p class="info-address"><%= animal.animal_address%></p>
+                        </div>
+                        <!-- ペット基本情報 -->
+                        <div class="info-content">
+                            <table class="top-table">
+                                <tr>
+                                    <th>種別</th>
+                                    <td data-label="種別"><%= animal.type %></td>
+                                </tr>
+                                <tr>
+                                    <th class="width-1200px-th-td">年齢</th>
+                                    <td data-label="年齢" ><%= animal.animal_age %></td>
+                                </tr>
+                                <tr>
+                                    <th>性別</th>
+                                    <td data-label="性別">
+                                        <% if (animal.animal_gender == '♂️' ) {%>
+                                            <div style="color: rgb(0, 192, 192);">男の子</div>
+                                        <% } else { %>
+                                            <div style="color: brown;">女の子</div>
+                                        <% } %>
+                                        </td>
+                                </tr>
+                                <tr>
+                                    <th>単身者</th>
+                                    <td data-label="単身者"><%=animal.animal_singler %></td>
+                                    
+                                </tr>
+                                <tr>
+                                    <th>高齢者</th>
+                                    <td data-label="高齢者"><%= animal.animal_older %></td>
+                                </tr>
+                                <tr>
+                                    <th>掲載期間</th>
+                                    <td data-label="掲載期間" style="color: rgb(233, 63, 63);"> <%= new Date(animal.publish_time).toLocaleDateString('ja-JP', { year: 'numeric', month: 'long', day: 'numeric' }) %> まで</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="info-contact-button info-top-button"><a href="#" class="box">里親を申し出る・お問い合わせ ＞</a></div>
+                    </div>
+                </div>
+                <div class="info-description">
+                    <div class="info-description-content">
+                        <section class="info-description-display">
+                            <div class="detail-title"><h2>詳細情報</h2></div>
+                            <div class="one-description">
+                                <h3>保護の経緯</h3>
+                                <%- animal.protected_situation %>
+                            </div>
+                            <div class="one-description">
+                                <h3>募集経緯</h3>
+                                <%- animal.recruitment_situation %>
+                            </div>
+                            <div class="one-description">
+                                <h3>性格や特徴</h3>
+                                <%- animal.animal_personality %>
+                            </div>
+                            <div class="one-description">
+                                <h3>健康状態</h3>
+                                <%- animal.animal_health %>
+                            </div>
+                            <div class="one-description">
+                                <h3>引き渡し方法</h3>
+                                <%- animal.animal_assignment %>
+                            </div>
+                            <div class="one-description">
+                                <h3>譲渡条件</h3>
+                                <%- animal.assignment_condition %>
+                            </div>
+                        </section>
+                        <aside>
+                            <div class="healthy-info info-content">
+                                <h2>健康・医療情報</h2>
+                                <div class="healthy-description">
+                                    <h3>病気の有無</h3>
+                                    <p><%= animal.animal_disease %></p>
+                                </div>
+                                <div class="healthy-description">
+                                    <h3>去勢・避妊</h3>
+                                    <p><%= animal.animal_spaying %></p>
+                                </div>
+                                <div class="healthy-description">
+                                    <h3>ワクチン接種</h3>
+                                    <p><%= animal.animal_vaccine %></p>
+                                </div>
+                            </div>
+                        </aside>
+                    </div>
+                </div>
+            </div>
+            <div class="info-contact">
+                <div class="attenstion-message">
+                    <p>ご利用規約等を熟読し、ご理解いただけた上で本ページのご利用をお願いしております。<br>
+                        保護動物も大切な命ですので、軽い気持ちでのご応募はお控えください。<br>
+                        お問い合わせしていただきましたら、こちらの方で後ほどメール等でご連絡いたします。<br>
+                        また、他に質問等がございましたら随時受け付けておりますのでよろしくお願いいたします。
+                    </p>
+            </div>
+                <div class="info-contact-button"><a href="#" class="box">里親を申し出る・お問い合わせ ＞</a></div>
+            </div>
+        </div>
+    </div>
+</div>
+<%} else { %>
+    <p>里親情報が見つかりません</p>
+<% } %>
+<section class="satooya-list-bar" id="article">
+    <article>
+        <h3 class="satooya-list-bar-title">この子たちも、温かいご縁を待っています</h3>
+        <div class="satooya-list-article">
+            <!-- 里親募集一覧 -->
+            <div class="carousel-container">
+                <button class="prev-btn">&lt;</button>
+                <div class="carousel">
+                    <% animals.forEach(animal_list => { %>
+                        <a href="/satooya/<%= animal_list.id %>" class="card">
+                            <img src="/img/Animals/animal-img/<%= animal.animal_img %>" alt="<%= animal.name %>">
+                            <div class="card-content">
+                                <div class="card-content-h3">
+                                    <h3><%= animal_list.animal_name %></h3>
+                                    <h3><%= animal_list.animal_age %></h3>
+
+                                </div>
+                                
+                                <p> <%= animal_list.animal_address %></p>
+                            </div>
+                        </a>
+                    <% }) %>
+                </div>
+                <button class="next-btn">&gt;</button>
+            </div>
+            <!--  -->
+        </div>
+        <div class="silde-scroll-content">
+            <p class="slide-scroll">scroll →</p>
+        </div>
+    </article>
+    <!-- /* 連携している会社のバナー 契約後バナー作成*/ -->
+    <!-- <div class="contract-baner">
+        <div class="contract-company"><p>Contarcted</p></div>
+        <div class="contract-company"><p>Contarcted</p></div>
+        <div class="contract-company"><p>Contarcted</p></div>
+    </div> -->
+</section>
+<div class="satooya-footer"><img src="/img/Animals/satooya-footer.png"></div>

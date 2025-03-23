@@ -29,13 +29,13 @@ const Footer = () => {
                 <li>
                     <h3>ニュース</h3>
                     <ul className="footer-submenu">
-                        <li><a href="/news-list">ニュース一覧</a></li>
+                        <li><a href="/news">ニュース一覧</a></li>
                     </ul>
                 </li>
                 <li>
                     <h3>ブログ</h3>
                     <ul className="footer-submenu">
-                        <li><a href="/news-list">記事一覧</a></li>
+                        <li><a href="/blog">記事一覧</a></li>
                     </ul>
                 </li>
             </ul>
