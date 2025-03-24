@@ -24,18 +24,18 @@ mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
 // app.use('/api/auth', authRoutes);
 // app.use('/api/users', userRoutes);
 // app.use('/api/data', dataRoutes);
-
-// フロントエンド（ユーザー向けサイト）を提供
-app.use(express.static(path.join(__dirname, '../frontend-animal/dist')));
-app.get('/*', (req, res) => {
+// ブログ記事を提供
+app.use('/blog', express.static(path.join(__dirname, '../article-hive-portal/dist')));
+app.get('/blog/*', (req, res) => {
     try {
-        res.sendFile(path.join(__dirname, '../frontend-animal/dist', 'index.html'));
-        console.log("✅ Frontend is served successfully.");
-    }catch (error) {
-        console.log("❌ Error serving frontend:", error);
+        res.sendFile(path.join(__dirname, '../article-hive-portal/dist', 'index.html'));
+        console.log("✅ Blog is served successfully.");
+    }catch(error) {
+        console.log( "❌ Error serving blog:", error);
         res.status(500).send("Internal Server Error");
     }
 });
+
 // try {
 //     res.sendFile(path.join(dashboardPath, 'index.html'));
 //     console.log("✅ Dashboard is served successfully.");
@@ -54,17 +54,7 @@ app.get('/admin/*', (req, res) => {
         res.status(500).send("Internal Server Error");
     }
 });
-// ブログ記事を提供
-app.use('/blog', express.static(path.join(__dirname, '../article-hive-portal/dist')));
-app.get('/blog/*', (req, res) => {
-    try {
-        res.sendFile(path.join(__dirname, '../article-hive-portal/dist', 'index.html'));
-        console.log("✅ Blog is served successfully.");
-    }catch(error) {
-        console.log( "❌ Error serving blog:", error);
-        res.status(500).send("Internal Server Error");
-    }
-});
+
 app.post('/send-mail', async (req, res) => {
     const { name, email, subject, message, isSubmitting } = req.body;
     // Nodemailerの設定
@@ -93,6 +83,17 @@ app.post('/send-mail', async (req, res) => {
     } catch (error) {
         console.error(error);
         res.status(500).json({ message: 'メール送信に失敗しました。' });
+    }
+});
+// フロントエンド（ユーザー向けサイト）を提供
+app.use(express.static(path.join(__dirname, '../frontend-animal/dist')));
+app.get('/*', (req, res) => {
+    try {
+        res.sendFile(path.join(__dirname, '../frontend-animal/dist', 'index.html'));
+        console.log("✅ Frontend is served successfully.");
+    }catch (error) {
+        console.log("❌ Error serving frontend:", error);
+        res.status(500).send("Internal Server Error");
     }
 });
 
